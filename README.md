@@ -11,20 +11,24 @@ The project contains:
 ## Usage
 ### Running PartA.py
 To tokenize a file and print the frequencies of each token, navigate to your assignment1 directory and run in terminal:
+    ```
     python3 PartA.py <TextFilePath>
-    '<TextFilePath>' should be replaced with the path to the text file you want to process.
+    ```
+    _'<TextFilePath>' should be replaced with the_ _path to the text file you want to process._
 
 ### Running PartB.py
 To find the common tokens between two text files, run in terminal:
+    ```
     python3 PartB.py <file1> <file2>
-    Replace '<file1>' and '<file2>' with the paths to the two text files you want to compare.
+    ```
+    _Replace '<file1>' and '<file2>' with the paths_ _to the two text files you want to compare._
 
 ## Time complexity
-**PartA.py**:
-- is_alphanumeric: O(1) - performs a constant time check for alphanumemric chars.
-- tokenize: O(n):  Linear time complexity based on the num of tokens.
-- printFrequencies: O(nlogn) - Sorts tokens based on frequency (and alphabetically for ties) in linear * log time.
+### PartA.py:
+- **is_alphanumeric**: O(1) - performs a constant time check for alphanumemric chars.
+- **tokenize**: O(n):  Linear time complexity based on the num of tokens.
+- **printFrequencies**: O(nlogn) - Sorts tokens based on frequency (and alphabetically for ties) in linear * log time.
 
-**PartB.py**:
-- countCommonTokens: O(n+m) - processes each file sequentially, making the time complexity linear to the size of both inputs
+### PartB.py:
+- **countCommonTokens**: O(n+m) - processes each file sequentially, making the time complexity linear to the size of both inputs
 
