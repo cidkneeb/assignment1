@@ -7,18 +7,18 @@ import PartA as part_a
 def countCommonTokens(file1_path, file2_path):
     """Count the number of common tokens between two files."""
     #tokenize firsy file and store in set for o(1) lookup
-    file1_tokens = set(part_a.tokenize(file1_path))
+    file1_tokens = set(part_a.tokenize(file1_path)) #O(n)
 
     #init common token counter
-    num_common = 0
+    num_common = 0 #O(1)
 
     #tokenize second file and check for common
-    for token in part_a.tokenize(file2_path):
-        if token in file1_tokens:
+    for token in part_a.tokenize(file2_path): #O(m)
+        if token in file1_tokens: #O(1)
             num_common += 1
             #remove token from file1_tokens so no double counting
-            file1_tokens.remove(token)
-    return num_common
+            file1_tokens.remove(token) #O(1)
+    return num_common #O(1)
 
 if __name__ == "__main__":
     #perform argument checks 
