@@ -1,4 +1,4 @@
-# Assignment1
+# Assignment 1
 
 ## Overview
 This project consists of two parts designed to perform text processing on input files. The goal is to tokenize input texts, count word frequencoes, and compare text files to find the number of common tokens between them.
@@ -14,14 +14,12 @@ To tokenize a file and print the frequencies of each token, navigate to your ass
     ```
     python3 PartA.py <TextFilePath>
     ```
-   > ```<TextFilePath>``` should be replaced with the path to the text file you want to process.
 
 ### Running PartB.py
 To find the common tokens between two text files, run in terminal:
     ```
     python3 PartB.py <file1> <file2>
     ```
-    > Replace ```<file1> ```and ```<file2>``` with the paths to the two text files you want to compare.
 
 ## Time complexity
 ### PartA.py:
