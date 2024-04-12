@@ -1,8 +1,9 @@
 import sys
-import pathlib
 import PartA as part_a
 
-#runtime complexity explanation
+#O(n+m) - n is num of tokens in file 1, m is num in file 2.
+#the func reads and processes each file sequentially, making time complexity
+#linear to the size of the inputs.
 def countCommonTokens(file1_path, file2_path):
     """Count the number of common tokens between two files."""
     #tokenize firsy file and store in set for o(1) lookup

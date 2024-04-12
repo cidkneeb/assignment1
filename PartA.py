@@ -1,14 +1,16 @@
 import sys
 import pathlib
 
-#runtime complexity explanation
+#O(1)- This check if a char is alphanumeric is constant time because the "in" membership test on a string is O(1) time. 
 def is_alphanumeric(char):
     '''Check if a character is alphanumeric'''
     return (char >= 'a' and char <= 'z') or (char >= 'A' and char <= 'Z') or (char >= '0' and char <= '9')
 
+#O(n)- Linear time relative to the size of the input file. Reading lines, iterating characters, scale linearly
+#with the size of the input text, where n is num of chars in file.
 def tokenize(TextFilePath):
-    '''Write a method/function that reads in a text file and returns a list of the tokens in that file. For the purposes of this project, a token is a sequence of alphanumeric characters, independent of capitalization (so Apple, apple, aPpLe are the same token). You are NOT allowed to use regular expressions (DO NOT USE THE re library), you are not allowed to import a tokenizer (e.g. from NLTK), since you are being asked to write a tokenizer.'''
-    # Check if the file exists
+    '''Tokenize the text in the file.'''
+
     if not pathlib.Path(TextFilePath).is_file():
         print("File does not exist")
         sys.exit(1)
@@ -30,7 +32,8 @@ def tokenize(TextFilePath):
             tokens.append(token.lower())
     return tokens
 
-#runtime complexity explanation
+#O(n) - Linear time, whre n is num of tokens. 
+#The function iterates through the list of tokens and counts the frequency of each token.
 def computeWordFrequencies(tokenList):
     """Counts the number of occurences of each token."""
     frequencies = {}
@@ -42,7 +45,8 @@ def computeWordFrequencies(tokenList):
     return frequencies
 
 
-#runtime complexity explanation
+#O(nlogn) - python's sorted function uses timsort which is O(nlogn) time complexity.
+#The lambda function slightly adds to the computation, but it doesn't change the overall time complexity.
 def printFrequencies(wordCount):
     """Prints word frequency count in descending order. Tie breaker is alphabetical."""
     for token, count in sorted(wordCount.items(), key = lambda item: (-item[1], item[0])):
