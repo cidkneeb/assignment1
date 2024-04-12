@@ -24,7 +24,8 @@ To find the common tokens between two text files, run in terminal:
 ## Time complexity
 ### PartA.py:
 - **is_alphanumeric**: O(1) - performs a constant time check for alphanumemric chars.
-- **tokenize**: O(n):  Linear time complexity based on the num of tokens.
+- **tokenize**: O(n) -  Linear time complexity based on the num of tokens.
+- **computeWordFrequencies**: O(n) - Linear time complexity based on the number of tokens.
 - **printFrequencies**: O(nlogn) - Sorts tokens based on frequency (and alphabetically for ties) in linear * log time.
 
 ### PartB.py:
