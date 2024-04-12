@@ -14,14 +14,14 @@ To tokenize a file and print the frequencies of each token, navigate to your ass
     ```
     python3 PartA.py <TextFilePath>
     ```
-    _```<TextFilePath>``` should be replaced with the_ _path to the text file you want to process._
+   > ```<TextFilePath>``` should be replaced with the path to the text file you want to process.
 
 ### Running PartB.py
 To find the common tokens between two text files, run in terminal:
     ```
     python3 PartB.py <file1> <file2>
     ```
-    _Replace ```<file1> ```and ```<file2>``` with the paths_ _to the two text files you want to compare._
+    > Replace ```<file1> ```and ```<file2>``` with the paths to the two text files you want to compare.
 
 ## Time complexity
 ### PartA.py:
